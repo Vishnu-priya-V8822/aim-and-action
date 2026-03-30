@@ -486,7 +486,7 @@ footer {
 
 /* Mobile Styles */
 @media(max-width: 992px) {
-   
+
     #about p {
         padding: 0 16px;
         text-align: justify;
@@ -496,6 +496,7 @@ footer {
     }
 
 }
+
 @media (max-width: 768px) {
 
     .menu-toggle {
@@ -540,5 +541,9 @@ footer {
     .logo-img {
         width: 140px;
     }
-}
 
+    .container {
+        width: 100%;
+
+    }
+}
