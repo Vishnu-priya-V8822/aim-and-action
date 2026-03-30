@@ -15,7 +15,7 @@
     <header>
         <nav class="container" role="navigation" aria-label="Primary Navigation">
             <a href="#home" class="logo" aria-label="Aim and Action logo">
-               <img src="images/logo.jpeg" alt="Aim & Action Logo" class="logo-img">
+                <img src="images/logo.jpeg" alt="Aim & Action Logo" class="logo-img">
             </a>
 
             <button class="menu-toggle" id="menu-toggle">
@@ -232,6 +232,13 @@
 
         toggleBtn.addEventListener("click", () => {
             navLinks.classList.toggle("active");
+        });
+
+        // Close menu on link click
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+            });
         });
     </script>
 
