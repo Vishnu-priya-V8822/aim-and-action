@@ -50,7 +50,7 @@ img {
 
 /* Header/Nav */
 header {
-    background: white;
+    background: #fff;
     box-shadow: 0 2px 8px rgba(10, 61, 98, 0.1);
     position: sticky;
     top: 0;
@@ -107,7 +107,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fff;
     padding: 0 1rem;
     text-align: center;
 }
@@ -156,13 +156,13 @@ nav {
 
 .btn-secondary {
     background: transparent;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid #fff;
+    color: #fff;
     box-shadow: none;
 }
 
 .btn-secondary:hover {
-    background-color: white;
+    background-color: #fff;
     color: var(--secondary-color);
 }
 
@@ -216,7 +216,7 @@ p.lead {
 }
 
 .service {
-    background: white;
+    background: #fff;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     padding: 2rem 1.5rem;
     border-radius: var(--border-radius);
@@ -225,8 +225,9 @@ p.lead {
 }
 
 .service:hover {
-    background: #ed6b09;;
-    color: white;
+    background: #ed6b09;
+    ;
+    color: #fff;
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
@@ -235,7 +236,7 @@ p.lead {
 .service:hover p,
 .service:hover span,
 .service:hover a {
-    color: white !important;
+    color: #fff !important;
 }
 
 .service-icon {
@@ -266,7 +267,7 @@ p.lead {
 }
 
 .portfolio-item {
-    background: white;
+    background: #fff;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -312,7 +313,7 @@ p.lead {
 }
 
 .testimonial {
-    background: white;
+    background: #fff;
     margin: 1rem auto;
     padding: 2rem 2.5rem;
     border-radius: var(--border-radius);
@@ -384,7 +385,7 @@ button[type="submit"] {
     display: block;
     width: 100%;
     background-color: var(--secondary-color);
-    color: white;
+    color: #fff;
     font-size: 1.2rem;
     font-weight: 700;
     padding: 15px;
@@ -402,7 +403,7 @@ button[type="submit"]:hover {
 /* Footer */
 footer {
     background-color: var(--primary-color);
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 1.5rem 1rem;
     box-shadow: inset 0 1px 5px rgba(255, 255, 255, 0.15);
@@ -417,7 +418,7 @@ footer {
 }
 
 .social-links a {
-    color: white;
+    color: #fff;
     transition: color 0.3s ease;
 }
 
@@ -472,3 +473,72 @@ footer {
 .why-item {
     max-width: 280px;
 }
+
+/* Hamburger button */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Mobile Styles */
+@media(max-width: 992px) {
+   
+    #about p {
+        padding: 0 16px;
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+        font-size: 18px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem 0;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .btn-secondary {
+        margin-top: 30px;
+    }
+
+    #about p {
+        padding: 0 16px;
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+    }
+
+}
+
+.logo-img {
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        width: 140px;
+    }
+}
+

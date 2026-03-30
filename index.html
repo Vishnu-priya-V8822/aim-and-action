@@ -15,9 +15,14 @@
     <header>
         <nav class="container" role="navigation" aria-label="Primary Navigation">
             <a href="#home" class="logo" aria-label="Aim and Action logo">
-                <img src="images/logo.jpeg" alt="Aim & Action Logo" width="200">
+               <img src="images/logo.jpeg" alt="Aim & Action Logo" class="logo-img">
             </a>
-            <div class="nav-links" role="menubar">
+
+            <button class="menu-toggle" id="menu-toggle">
+                ☰
+            </button>
+
+            <div class="nav-links" id="nav-links" role="menubar">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
@@ -27,7 +32,7 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero" id="home" role="banner" data-aos="zoom-in">>
+    <section class="hero" id="home" role="banner" data-aos="zoom-in">
         <div class="hero-content container">
             <h1>Turning Your Ideas into Digital Reality</h1>
             <p>Premium Web & App Development Solutions Tailored for Your Business</p>
@@ -207,15 +212,29 @@
         });
     </script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Initialize AOS animations -->
     <script>
         AOS.init({
             duration: 1000,
             once: true
         });
     </script>
+    <!-- Set current year in footer -->
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
+    <!--menu toggle script-->
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        toggleBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+
 </body>
 
 </html>
